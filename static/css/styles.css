@@ -1,0 +1,114 @@
+::-webkit-scrollbar {
+  width: 10px; /* entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #bed2e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0e96a8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #05332d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 1;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+  margin: 1;
+  text-align: center;
+  color: #fff;
+  font: Roboto Condensed Bold;
+}
+
+.box {
+  max-width: 60%;
+  height: 300px; /* Set a fixed height for the box */
+  overflow-y: auto; /* Adds a vertical scrollbar when content overflows */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  font-weight: 500;
+  background-color: rgba(91, 158, 235, 0.74);
+  margin: auto;
+  padding: 20px;
+  display: flexbox;
+  justify-items: center;
+  color: #0b3685;
+  word-wrap: break-word; /* Wrap long words */
+  border-radius: 25px;
+  animation: SlideIn 1s ease-out;
+}
+
+@keyframes SlideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideOn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+figcaption {
+  margin-top: 15px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2b2b2a;
+  width: fit-content;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #ababab;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #595e63;
+  opacity: 0.5;
+}
+
+.content {
+  display: none;
+  width: 50%;
+  margin: 0px auto;
+}
+
+.content:target {
+  display: block;
+}
